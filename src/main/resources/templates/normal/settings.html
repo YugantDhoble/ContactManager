@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>This is User DashBoard</title>
+</head>
+<body>
+	<section>
+		<div class="card mr-5">
+			<div class="card-body ">
+			  <div class="container text-center">
+		      <img src="" style="width:250px; height:250px; object-fit:cover; border-radius:50%" class="my_profile_picture" th:src="@{'/images/contact_dashboard.png'}" alt="profile pic">
+			</div>
+			<h1 class="text-center mt-3"> Welcome To Settings <span th:text="${user.name}"></span>  </h1>
+			<h3 class="text-center mt-3">Change Password</h3>
+			
+			<form th:action="@{/user/change-password}" method="post">
+			
+				<div class="form-group">
+					<input name="oldPassword" type="password" class="form-control" placeholder="Enter old password" />
+				</div>
+				
+					<div class="form-group">
+					<input name="newPassword" type="password" class="form-control" placeholder="Enter new password" />
+				</div>
+				
+				<div class="container text-center">
+					<button type="submit" class="btn btn-success">Change</button>
+					<button type="reset" class="btn btn-warning">Reset</button>
+					
+				</div>
+			
+			</form>
+			
+			
+			</div>
+		</div>
+	
+	
+</section>
+</body>
+</html>
