@@ -14,7 +14,7 @@
 	<name>smartcontactmanager</name>
 	<description>first spring boot project</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 			<!-- https://mvnrepository.com/artifact/com.sun.mail/javax.mail -->
